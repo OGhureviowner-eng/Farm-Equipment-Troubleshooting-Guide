@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Equipment Troubleshooting Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-tractor"></i> Farm Equipment Troubleshooting</h1>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Search Bar -->
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search issues (e.g., tractor won't start, irrigation leak)">
+            <button onclick="searchIssues()"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Categories -->
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="tractor">Tractors</button>
+            <button class="category-btn" data-category="irrigation">Irrigation</button>
+            <button class="category-btn" data-category="network">Network/Computer</button>
+            <button class="category-btn" data-category="soil">Soil Sensors</button>
+        </div>
+
+        <!-- Troubleshooting Cards -->
+        <div id="issuesContainer" class="issues-grid">
+            <!-- Content loaded by JavaScript -->
+        </div>
+
+        <!-- Print Button -->
+        <div class="print-section">
+            <button onclick="printChecklist()" class="print-btn">
+                <i class="fas fa-print"></i> Print Current Checklist
+            </button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
